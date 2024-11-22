@@ -21,13 +21,13 @@
                 <h2>This is not a real page, in fact we don't even exist yet. 
                     But by creating an account to our fabulous site, you'll get 
                     impressed by all the wonderful things that the sheer <em>nothingness</em>
-                    can give to you. <br>
-                    All that by creating an account with <em>us.</em>
-                </h2>
+                    can give to you. 
+                </h2> 
+                <h2> All that by creating an account with <em>us.</em></h2>
             </div>
-            <h2>So what are you waiting <em>for</em>? <strong>Join us today!</strong></h2>
-            <form action="#" method="post" novalidate>
-                <div class="sign-up-form container">
+            <div class="sign-up container">
+                <h2>So what are you waiting <em>for</em>? <strong>Join us today!</strong></h2>
+                <form action="#" method="post" class="sign-up-form" novalidate>
                     <ul>
                         <li>
                             <label for="fname">First name</label>
@@ -42,18 +42,8 @@
                             <input type="email" name="email" id="email" required aria-label="required">
                         </li>
                         <li>
-                            <ul class="phone-container">
-                                <label for="phone">Phone Number</label>
-                                <li>
-                                    <input type="tel" name="phone" id="phone1" maxlength="3" required aria-label="required">
-                                </li>
-                                <li>
-                                    <input type="tel" name="phone" id="phone2" minlength="2" maxlength="5" required aria-label="required">
-                                </li>
-                                <li>
-                                    <input type="tel" name="phone" id="phone3" minlength="6" maxlength="8" required aria-label="required">
-                                </li>
-                            </ul>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" name="phone" id="phone" maxlength="13" required aria-label="required">
                         </li>
                         <li>
                             <label for="pwd">Password</label>
@@ -64,7 +54,8 @@
                             <input type="password" name="pwd" id="c-pwd" required aria-label="required">
                         </li>
                     </ul>
-                </div>
+                </form>
+            </div>
                 <div class="footer container">
                     <button type="submit">Create Account</button>
                     <p>Already have an account? <a href="">Log in</a></p>
