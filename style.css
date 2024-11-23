@@ -216,13 +216,14 @@ summary {
 	--header-bg-color: #FAFAFA;
 	--border-color: #F0F0F0;
 	--alt-color: #FD8E32;
+	--link-color: #E4AB39;
+	--link-color-visited: #60FA60;
 	--button-shadow: #BBB;
 	--invalid-color: #DF4040;
 	--valid-color: #40DF40;
 }
 
 /* Generic styling */
-
 body {
     background-color: var(--side-bg-color);
 }
@@ -276,28 +277,40 @@ button:disabled {
 	pointer-events: none;
 }
 
+a,
+a:visited {
+	color: var(--link-color);
+}
+
+a:hover {
+	color: var(--link-color-visited);
+}
+
 /* More specific class and id attribute rules */
 .container {
     padding: 2.2rem;
 }
 
 .main-container {
+	display: flex;
+	flex-direction: column;
     flex: 1 0 80%;
     width: 100%;
-    height: 100vh;
+    height: 150vh;
 }
 
 .header {
     background-color: var(--header-bg-color);
     border-bottom: 1px solid var(--border-color);
     text-align: start;
+	align-content: end;
+	min-height: 50vh;
 }
 
 .background {
-    flex: 1 1 150px;
-    width: 40%;
-    height: 150vh;
-    border: 1px solid var(--border-color);
+    flex: 1 1 40%;
+    height: inherit;
+    border-right: 1px solid var(--border-color);
 }
 
 .sign-up {
@@ -331,12 +344,20 @@ button:disabled {
 	background: linear-gradient(to bottom, var(--border-color), var(--main-bg-color));
 }
 
+.footer	{
+	display: inherit;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 100%;
+	flex: 1;
+}
+
 /* Create a div wrapper for the button when its disabled */
 .button-container {
 	width: fit-content;
 }
 
-.button-container,
+.button-container[disabled],
 button:disabled {
 	cursor: not-allowed; 
 }
