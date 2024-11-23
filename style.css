@@ -1,3 +1,11 @@
+@font-face {
+	font-family: "Norse";
+	src: url("./fonts/Norse-Bold.otf") format("otf");
+
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* Generic normalize rules, go to line 209 for actual style rules */
 /*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -380,6 +388,8 @@ button:disabled {
 
 	align-items: center;
 	justify-content: center;
+
+	font-family: "Norse", sans-serif;
 }
 
 .sidebar-container::after {
