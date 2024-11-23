@@ -311,6 +311,7 @@ a:hover {
     flex: 1 1 40%;
     height: inherit;
     border-right: 1px solid var(--border-color);
+	background: url(./img/annie-spratt-unsplash-compressed.png) repeat-y;
 }
 
 .sign-up {
@@ -340,7 +341,6 @@ a:hover {
 .shadow {
 	height: 16px;
 	width: 100%;
-
 	background: linear-gradient(to bottom, var(--border-color), var(--main-bg-color));
 }
 
@@ -360,4 +360,35 @@ a:hover {
 .button-container[disabled],
 button:disabled {
 	cursor: not-allowed; 
+}
+
+.side-container {
+	position: relative;
+	display: inherit;
+}
+
+.sidebar-container {
+	display: flex;
+	position: absolute;
+	top: 50%;
+
+	width: 100%;
+	height: fit-content;
+
+	background-color: var(--side-bg-color);
+	opacity: 75%;
+
+	align-items: center;
+	justify-content: center;
+}
+
+.sidebar-container::after {
+	color: #FFF;
+	content: "odin";
+}
+
+.sidebar-container .logo {
+	width: 25%;
+	min-height: 100%;
+	background: transparent;
 }
