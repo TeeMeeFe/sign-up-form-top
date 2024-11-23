@@ -392,3 +392,16 @@ button:disabled {
 	min-height: 100%;
 	background: transparent;
 }
+
+.side-footer {
+	position: absolute;
+	bottom: 0;
+
+	text-align: center;
+	color: #FFF;
+	background: #222222C0;
+}
+
+.side-footer .link-author::before {
+	content: "Annie Spratt";
+}
