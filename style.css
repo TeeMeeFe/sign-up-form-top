@@ -209,17 +209,29 @@ summary {
 }
 
 /* Actual style rules */
+/* Custom style properties */
+:root {
+	--main-bg-color: #FFF;
+	--side-bg-color: #222;
+	--header-bg-color: #FAFAFA;
+	--border-color: #F0F0F0;
+	--alt-color: #FD8E32;
+	--button-shadow: #BBB;
+	--invalid-color: #DF4040;
+	--valid-color: #40DF40;
+}
+
 /* Generic styling */
 
 body {
-    background-color: #222;
+    background-color: var(--side-bg-color);
 }
 
 main {
     display: flex;
     width: 90%;
     margin: auto;
-    background-color: #FFF;
+    background-color: var(--main-bg-color);
 }
 
 ul {
@@ -238,6 +250,32 @@ br {
     padding-top: 1em;
 }
 
+button {
+	background-color: var(--alt-color);
+	color: var(--main-bg-color);
+	font-weight: 700;
+
+	border: 0;
+	border-radius: 1em;
+	box-shadow: 0 0 8px 1px var(--button-shadow);
+	padding: 0.8em 4em;
+}
+
+button:hover {
+	box-shadow: 0 0 10px 2px var(--alt-color);
+	cursor: pointer;
+}
+
+button:active {
+	box-shadow: 0 0 4px 1px var(--button-shadow);
+	color: var(--side-bg-color);
+}
+
+button:disabled {
+	background-color: var(--button-shadow);
+	pointer-events: none;
+}
+
 /* More specific class and id attribute rules */
 .container {
     padding: 2.2rem;
@@ -250,21 +288,21 @@ br {
 }
 
 .header {
-    background-color: #FAFAFA;
-    border: 1px solid #F0F0F0;
+    background-color: var(--header-bg-color);
+    border-bottom: 1px solid var(--border-color);
     text-align: start;
 }
 
 .background {
     flex: 1 1 150px;
     width: 40%;
-    height: 100vh;
-    border: 1px solid #DCDCDC;
+    height: 150vh;
+    border: 1px solid var(--border-color);
 }
 
 .sign-up {
-    padding: 1.2rem 2.2em;
-    border-bottom: 1px solid #DCDCDC;
+    padding: 1.2rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .sign-up h2 {
@@ -280,4 +318,25 @@ br {
 
 .sign-up-form {
     max-width: 800px;
+}
+
+.underlabel {
+	font-size: 0.8em;
+}
+
+.shadow {
+	height: 16px;
+	width: 100%;
+
+	background: linear-gradient(to bottom, var(--border-color), var(--main-bg-color));
+}
+
+/* Create a div wrapper for the button when its disabled */
+.button-container {
+	width: fit-content;
+}
+
+.button-container,
+button:disabled {
+	cursor: not-allowed; 
 }
