@@ -344,6 +344,10 @@ a:hover {
     max-width: 800px;
 }
 
+.sign-up span {
+	min-height: 1rem;
+}
+
 .underlabel {
 	font-size: 0.8em;
 }
@@ -452,5 +456,5 @@ button:disabled {
 }	
 
 @media (min-width: 443px) {
-	
+
 }
